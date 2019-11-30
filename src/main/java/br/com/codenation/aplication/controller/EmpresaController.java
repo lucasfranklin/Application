@@ -17,11 +17,16 @@ public class EmpresaController {
         this.repository = repository;
     }
 
-    @GetMapping("/vi/save")
+    @GetMapping("/v1/save")
     ResponseEntity save(@RequestBody Empresa emp){
         repository.saver(emp);
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/v1/salary")
+    ResponseEntity salary(@RequestBody Empresa emp){
+        repository.saver(emp);
+        return ResponseEntity.ok().build();
+    }
 
 }
